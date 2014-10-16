@@ -13,3 +13,4 @@ Efter at du har lavet en clone af projektet skal du gøre følgende:
 2. Gå til panis/src/main/scripts/ og skriv "bower install"
 3. start applikationen.
 
+[Webapp: Læs mere om hvilke regler der gælder hvis du skal tilføje noget](./../../tree/master/src/main/webapp)
