@@ -7,4 +7,4 @@ Den ultimative morgen(panis) applikation
 
 Clone: https://github.com/TopEE/panis.git
 
-[Se her for hvordan du får projektet op at køre](./../../tree/master/src/main/readme.md)
+[Se her for hvordan du får projektet op at køre](./../../tree/master/src/main)
