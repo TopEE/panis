@@ -1,0 +1,23 @@
+<div>
+    <button ng-show="tester">Flip</button>
+    <form ng-show="!tester" role="form" class="register-form form-horizontal">
+        <div class="form-group-lg">
+            <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                <input type="text" placeholder="Indtast et brugernavn" class="form-control">
+            </div>
+            <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                <input type="text" placeholder="Indtast en email adresse" class="form-control">
+            </div>
+            <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                <input type="password" placeholder="indtast et password" class="form-control">
+            </div>
+            <p class="form-group">
+                <a class="btn btn-primary btn-lg" role="button" ng-click="regCtrl.showRegisterUserForm = false">Annuler</a>
+                <a class="btn btn-primary btn-lg" role="button">Opret</a>
+            </p>
+        </div>
+    </form>
+</div>

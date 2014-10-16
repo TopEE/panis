@@ -1,2 +1,4 @@
 /.idea
 /target
+/src/main/scripts/bower_components
+/node_modules
