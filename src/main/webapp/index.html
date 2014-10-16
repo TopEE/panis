@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-    <h1>Velkommen til Panis</h1>
-</body>
+<html ng-app="panis">
+    <head lang="en">
+        <base href="./.." target="_blank">
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="scripts/bower_components/fontawesome/css/font-awesome.css">
+        <link rel="stylesheet" href="scripts/bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="scripts/bower_components/animate-css/animate.css">
+        <link rel="stylesheet" href="webapp/default.css">
+    </head>
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top morgen" role="navigation" ng-controller="NavigationController as navCtrl">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">{{navCtrl.logged}}</a></li>
+                <li class="navbar-inverse"><a href="#">Tilmeld</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="form" id="loginForm">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                    <input type="text" placeholder="Email" class="form-control" ng-model="navCtrl.logged">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                    <input type="password" placeholder="Password" class="form-control">
+                </div>
+                <button id="loginButton" type="submit" class="btn btn-success" onclick="$('#loginForm').addClass('animated bounceOutRight');"><i class="fa fa-sign-in fa-fw"></i>Log ind</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Den sprøde morgenmadsapplikation!</h1>
+            <div class="col-md-5">
+                <p>Stedet hvor du ikke går glip af morgenmaden. Hvis du ikke har fået registreret dig endnu, så få gjort det lige nu!</p>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-5" ng-controller="RegisterController as regCtrl">
+                <button id="register-button" ng-show="!regCtrl.showRegisterUserForm" class="register-button btn btn-primary btn-lg btn-block" style="height: 243px" onclick="$('#register-button').addClass('hide');">
+                    <h3>Opret mig som bruger<i class="fa fa-arrow-right fa-fw"></i></h3>
+                </button>
+                <form id="register-form" ng-show="regCtrl.showRegisterUserForm" role="form" class="register-form form-horizontal">
+                    <div class="form-group-lg">
+                        <div class="input-group form-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                            <input type="text" placeholder="Indtast et brugernavn" class="form-control">
+                        </div>
+                        <div class="input-group form-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                            <input type="text" placeholder="Indtast en email adresse" class="form-control">
+                        </div>
+                        <div class="input-group form-group">
+                            <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                            <input type="password" placeholder="indtast et password" class="form-control">
+                        </div>
+                        <p class="form-group">
+                            <a class="btn btn-primary btn-lg" role="button" onclick="$('#register-form').addClass('hide');">Annuler</a>
+                            <a class="btn btn-primary btn-lg" role="button">Opret</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <p>&copy; IT-Skade Topdanmark 2014</p>
+    </footer>
+
+    <script src="scripts/bower_components/jquery/dist/jquery.js"></script>
+    <script src="scripts/bower_components/angular/angular.js"></script>
+    <script src="scripts/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="scripts/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="webapp/js/app.js"></script>
+    <script src="webapp/js/navigation/navigation.controller.js"></script>
+    <script src="webapp/js/registration/register.controller.js"></script>
+    </body>
 </html>
