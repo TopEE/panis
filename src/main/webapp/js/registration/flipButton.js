@@ -2,7 +2,7 @@
 
     'use strict';
     
-    angular.module('morgenmad').directive('flipButton', flipButton);
+    angular.module('panis').directive('flipButton', flipButton);
 
     function flipButton($animate) {
         var directive = {

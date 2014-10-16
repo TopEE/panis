@@ -1,4 +1,4 @@
 /.idea
 /target
-/src/main/scripts/bower_components
+/src/main/webapp/scripts/bower_components
 /node_modules
