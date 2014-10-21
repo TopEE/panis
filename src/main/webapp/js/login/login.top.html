@@ -1,0 +1,18 @@
+<div class="navbar navbar-inverse navbar-fixed-top morgen" role="navigation">
+    <div class="container">
+        <form class="navbar-form navbar-right" role="form" id="loginForm">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                <input type="text" placeholder="Email" class="form-control" ng-model="navCtrl.logged">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button id="loginButton" type="submit" class="btn btn-success" ng-click=""
+                    onclick="$('#loginForm').addClass('animated bounceOutRight');"><i class="fa fa-sign-in fa-fw"></i>Log
+                ind
+            </button>
+        </form>
+    </div>
+</div>

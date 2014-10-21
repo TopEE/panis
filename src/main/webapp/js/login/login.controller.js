@@ -2,7 +2,7 @@
 
     'use strict';
     
-    angular.module('panis').controller('LoginController', LoginController);
+    angular.module('panis.login').controller('LoginController', LoginController);
     
     function LoginController(loginService) {
         /* jshint validthis: true */
@@ -16,7 +16,7 @@
         }
 
         function login(username, password) {
-
+            loginService.login(username, password);
         }
 
     }

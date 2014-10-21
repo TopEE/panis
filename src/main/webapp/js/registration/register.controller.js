@@ -2,9 +2,9 @@
 
     'use strict';
     
-    angular.module('panis').controller('RegisterController', RegisterController);
+    angular.module('panis').controller('RegistrationController', RegistrationController);
     
-    function RegisterController($scope) {
+    function RegistrationController($scope) {
         /* jshint validthis: true */
         var vm = this;
         

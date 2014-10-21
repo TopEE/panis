@@ -2,7 +2,7 @@
     
 describe('Service (factory): loginService', function() {
 
-    beforeEach(module('panis'));
+    beforeEach(module('panis.login'));
 
     var loginService;
 
