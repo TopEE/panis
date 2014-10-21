@@ -11,21 +11,16 @@
     display: block !important;
 }
 
-.register-button.show {
+.register-form-animate-in {
     -webkit-animation: flipInY 2s;
     animation: flipInY 2s;
     display: block !important;
 }
 
-.flipOutY-add {
+.register-button-animate-out {
     -webkit-animation: flipOutY 2s;
     animation: flipOutY 2s;
     display: block !important;
-}
-
-.flipOutY-remove {
-    color: gold;
-
 }
 
 .register-form.show {
@@ -33,3 +28,4 @@
     animation: flipInY 2s;
     display: block !important;
 }
+

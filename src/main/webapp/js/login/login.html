@@ -1,7 +1,6 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Den sprøde morgenmadsapplikation!</h1>
-
         <div class="col-md-5">
             <p>Stedet hvor du ikke går glip af morgenmaden. Hvis du ikke har fået registreret dig endnu, så få gjort det
                 lige nu!</p>
@@ -10,11 +9,10 @@
         </div>
         <div class="col-md-5">
             <button
-                    id="register-button"
-                    class="register-button btn btn-primary btn-lg btn-block"
-                    style="height: 243px"
-                    ng-class="{'flipOutY': login.registrationPushed}"
-                    ng-click="login.registrationPushed = true">
+                class="btn btn-primary btn-lg btn-block"
+                style="height: 243px"
+                ng-class="{'register-button-animate-out': login.registrationPushed}"
+                ng-click="login.registrationPushed = true">
                 <h3>Opret mig som bruger<i class="fa fa-arrow-right fa-fw"></i></h3>
             </button>
         </div>

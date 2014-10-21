@@ -2,38 +2,14 @@
 
     'use strict';
     
-    angular.module('panis.login').animation('.register-button', registerButton);
+    angular.module('panis.login').animation('.register-button-animate-out', registerButton);
     
-    function registerButton() {
+    function registerButton($state) {
         return {
-            beforeAddClass: function (element, className, done) {
-                console.log("beforeAddClass (register-button): " + className);
-                console.log(element);
-                done();
-            },
             addClass: function(element, className, done) {
-                console.log("addClass (register-button): " + className);
-                console.log(element);
-                done();
-            },
-            beforeRemoveClass: function (element, className, done) {
-                console.log("beforeRemoveClass (register-button): " + className);
-                console.log(element);
-                done();
-            },
-            removeClass: function(element, className, done) {
-                console.log("removeClass (register-button): " + className);
-                console.log(element);
-                done();
-            },
-            enter: function (element, className, done) {
-                console.log("enter (register-button): " + className);
-                console.log(element);
-                done();
-            },
-            leave: function (element, className, done) {
-                console.log("leave (register-button): " + className);
-                console.log(element);
+                element.bind('animationend webkitAnimationEnd', function () {
+                    $state.go('registration');
+                });
                 done();
             }
         }
