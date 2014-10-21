@@ -1,4 +1,3 @@
-
 <div class="jumbotron">
     <div class="container">
         <h1>Den sprøde morgenmadsapplikation!</h1>
@@ -14,8 +13,8 @@
                     id="register-button"
                     class="register-button btn btn-primary btn-lg btn-block"
                     style="height: 243px"
-                    onclick="$('#register-button').addClass('animate flipOutY');"
-                    ui-sref="panis.registration">
+                    ng-class="{'flipOutY': login.registrationPushed}"
+                    ng-click="login.registrationPushed = true">
                 <h3>Opret mig som bruger<i class="fa fa-arrow-right fa-fw"></i></h3>
             </button>
         </div>

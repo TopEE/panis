@@ -1,7 +1,11 @@
 (function () {
     "use strict";
 
-    angular.module('panis.login', ['ui.router'])
+    angular.module('panis.login', [
+        'ui.router',
+        'panis.registration',
+        'ngAnimate'
+    ])
 
         .config(function ($stateProvider) {
             $stateProvider
@@ -9,11 +13,12 @@
                     url: '/login',
                     views: {
                         'navigation': {
-                            templateUrl: 'login.top.html',
+                            templateUrl: 'js/login/login.top.html',
                             controller: 'LoginController as login'
                         },
                         'content': {
-                            templateUrl: 'login.html'
+                            templateUrl: 'js/login/login.html',
+                            controller: 'LoginController as login'
                         }
 
                     }
