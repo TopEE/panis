@@ -1,7 +1,5 @@
 package dk.topee.panis.business.login.boundary;
 
-import javafx.application.Application;
-
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.ws.rs.GET;

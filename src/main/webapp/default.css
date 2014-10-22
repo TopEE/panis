@@ -2,28 +2,19 @@
     background-image: url("img/morgenmad-top.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 60px;
 }
 
-.register-button.hide {
-    -webkit-animation: flipOutY 2s;
-    animation: flipOutY 2s;
-    display: block !important;
-}
-
-.register-button.show {
+.flip-animate-in {
     -webkit-animation: flipInY 2s;
     animation: flipInY 2s;
-    display: block !important;
 }
 
-.register-form.hide {
+.register-button-animate-out, .register-form-animate-out {
     -webkit-animation: flipOutY 2s;
     animation: flipOutY 2s;
-    display: block !important;
 }
 
-.register-form.show {
-    -webkit-animation: flipInY 2s;
-    animation: flipInY 2s;
-    display: block !important;
+.hideMe {
+    display: none;
 }
