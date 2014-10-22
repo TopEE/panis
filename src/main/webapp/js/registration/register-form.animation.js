@@ -2,7 +2,7 @@
 
     'use strict';
 
-    angular.module('panis').animation('.register-form', registerForm);
+    angular.module('panis.registration').animation('.register-form', registerForm);
 
     function registerForm() {
         return {

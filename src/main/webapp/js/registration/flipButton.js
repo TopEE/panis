@@ -13,7 +13,7 @@
             scope: {
                 'showAttribute': '=',
                 'afterShowButton': '&',
-                'afterHideForm': '&',
+                'afterHideForm': '&'
             }
         };
         return directive;
