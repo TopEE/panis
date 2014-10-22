@@ -10,8 +10,12 @@ describe('Service (factory): loginService', function() {
         loginService = _loginService_;
     }));
 
-    it('should do something', function () {
-        expect(!!loginService).toBe(true);
+    it('should return a user when called with a valid username and password', function () {
+        
+        var user = loginService.login('svx', 'incorrect');
+        
+        expect(user).not.toBe(null);
+        expect(user.user).toBe('svx');
     });
     
 });

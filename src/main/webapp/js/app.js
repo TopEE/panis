@@ -4,7 +4,8 @@
         'ui.router',
         'ngAnimate',
         'panis.login',
-        'panis.registration'
+        'panis.registration',
+        'panis.list'
     ])
 
         .config(function ($stateProvider, $urlRouterProvider) {
