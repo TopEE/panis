@@ -17,7 +17,12 @@
         }
 
         function authenticate(username, password) {
-            loginService.login(username, password);
+            var user = loginService.login(username, password);
+            if(user) {
+                $state.go('list');
+            } else {
+                console.log('Du blev ikke logget ind!');
+            }
         }
 
         function goRegister() {
