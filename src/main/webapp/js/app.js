@@ -1,5 +1,6 @@
 angular.module('panis', [
-    'ui.router'
+    'ui.router',
+    'panis.registration'
 ])
 
     .config(function ($stateProvider, $urlRouterProvider) {
