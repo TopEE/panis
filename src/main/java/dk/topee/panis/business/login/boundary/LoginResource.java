@@ -8,7 +8,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.logging.Logger;
 
-@Path("/login")
+@Path("login")
 @Produces(MediaType.APPLICATION_JSON)
 public class LoginResource {
 
@@ -18,7 +18,7 @@ public class LoginResource {
     public JsonObject getUsername() {
         log.entering(getClass().getName(), "getUsername");
         log.exiting(getClass().getName(), "getUsername");
-        return Json.createObjectBuilder().add("name", "FLemming").build();
+        return Json.createObjectBuilder().add("name", "Flemming").build();
 
     }
 

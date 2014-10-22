@@ -4,7 +4,7 @@ import javax.ejb.Stateless;
 import javax.security.auth.login.LoginException;
 
 @Stateless
-public class LoginService {
+public class LoginServiceBean {
 
 
 
