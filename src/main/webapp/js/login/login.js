@@ -1,11 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('panis.login', [
-        'ui.router',
-        'panis.registration',
-        'ngAnimate'
-    ])
+    angular.module('panis.login', [])
 
         .config(function ($stateProvider) {
             $stateProvider

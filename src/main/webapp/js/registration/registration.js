@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('panis.registration', ['ui.router'])
+    angular.module('panis.registration', [])
 
         .config(function ($stateProvider) {
             $stateProvider

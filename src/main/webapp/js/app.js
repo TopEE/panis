@@ -2,6 +2,7 @@
 
     angular.module('panis', [
         'ui.router',
+        'ngAnimate',
         'panis.login',
         'panis.registration'
     ])
