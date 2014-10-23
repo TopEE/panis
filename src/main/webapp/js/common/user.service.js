@@ -34,7 +34,7 @@
 
         function login(username, password) {
             console.log('1; ' + username + ', ' + password);
-            return  _.find(users, function (user) {
+            return loggedInUser = _.find(users, function (user) {
                 console.log('userName: ' + user.user);
                 console.log('password: ' + user.password);
                 if(user.user === username && user.pass === password) {
