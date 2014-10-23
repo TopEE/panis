@@ -18,7 +18,8 @@ module.exports = function(config) {
         'src/main/webapp/scripts/bower_components/jquery/dist/jquery.js',
         'src/main/webapp/scripts/bower_components/angular/angular.js',
         'node_modules/angular-mocks/angular-mocks.js',
-        'src/main/webapp/js/**/*.js'
+        'src/main/webapp/scripts/bower_components/lodash/dist/lodash.js',
+        'src/main/webapp/js/common/*.js'
     ],
 
 

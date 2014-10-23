@@ -2,14 +2,14 @@
 
     'use strict';
 
-	angular.module('panis.login').factory('loginService', loginService);
+	angular.module('user-service', []).factory('userService', UserService);
 	
-	function loginService() {
+	function UserService() {
 
-		var service = {
+        var service = {
             login: login,
             getLoggedInUser: getLoggedInUser
-		};
+        };
 
         var users = [
             {
@@ -26,27 +26,24 @@
 
         var loggedInUser;
 
-		return service;
+        return service;
 
         function  getLoggedInUser() {
             return loggedInUser;
         }
 
         function login(username, password) {
-
             console.log('1; ' + username + ', ' + password);
-           var foundUser =  _.find(users, function (user) {
-               console.log('userName: ' + user.user);
-               console.log('password: ' + user.password);
+            return  _.find(users, function (user) {
+                console.log('userName: ' + user.user);
+                console.log('password: ' + user.password);
                 if(user.user === username && user.pass === password) {
                     console.log('found!');
-                   return true;
+                    return true;
                 }
             });
-
-            loggedInUser = foundUser;
-            return loggedInUser;
         }
-	}
+
+}
 
 })();

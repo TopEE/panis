@@ -4,12 +4,11 @@
     
     angular.module('panis.registration').controller('RegistrationController', RegistrationController);
     
-    function RegistrationController($scope) {
+    function RegistrationController() {
         /* jshint validthis: true */
-        var vm = this;
-
-        console.log("hej");
-        
+        var registration = this;
+        registration.hej = 'Hej';
+        console.log(registration.hej);
     }
 
 })();

@@ -2,9 +2,9 @@
 
     'use strict';
     
-    angular.module('panis.login').controller('LoginController', LoginController);
+    angular.module('panis.login', []).controller('LoginController', LoginController);
     
-    function LoginController(loginService, $state, $timeout) {
+    function LoginController($state, userService) {
         /* jshint validthis: true */
         var login = this;
         login.authenticate = authenticate;
@@ -16,7 +16,7 @@
         }
 
         function authenticate(username, password) {
-            var user = loginService.login(username, password);
+            var user = userService.login(username, password);
             if(user) {
                 $state.go('list');
             } else {

@@ -3,6 +3,7 @@
     angular.module('panis', [
         'ui.router',
         'ngAnimate',
+        'user-service',
         'panis.login',
         'panis.registration',
         'panis.list'
