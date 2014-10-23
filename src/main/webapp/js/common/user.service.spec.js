@@ -15,5 +15,10 @@ describe('Service (factory): UserService', function() {
         expect(user).not.toBe(undefined);
         expect(user.user).toBe('svx');
     });
-    
+
+    it('should set the loggedInUser after a successful login', function () {
+        userService.login('svx', 'qq');
+        expect(userService.getLoggedInUser).toBeDefined();
+    });
+
 });
