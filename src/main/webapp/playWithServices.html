@@ -10,18 +10,30 @@
 
                     .controller('myCtrl1', function (service1, factory1) {
                         var my1 = this;
-                        my1.text = factory1;
+                        my1.text = service1;
+
                     })
 
                     .controller('myCtrl2', function (service1, factory1) {
                         var my2 = this;
-                        my2.text = factory1;
+                        my2.text = service1;
                     })
 
                     .service('service1', function () {
                         var S1 = this;
-                        S1.text = "Flemming";
+                        var text2 = "Flemming";
 
+                        S1.getData = function () {
+                            return text2;
+                        }
+
+                        S1.setData = function (text) {
+                            text2 = text;
+                        }
+
+                        S1.internalMethod = function () {
+                            console.log('Denne skal ikke kunne kaldes');
+                        }
                     })
 
                     .factory('factory1', function () {
@@ -32,17 +44,20 @@
 
                         return service;
 
+                        function internalMethod() {
+                            console.log('Denne skal ikke kunne kaldes');
+                        }
                     })
         </script>
     </head>
     <body ng-app="play">
         <div ng-controller="myCtrl1 as c1">
-            <input type="text" ng-model="c1.text.t">
-            <span style="background-color: darkgray;">{{c1.text.t}}</span>
+            <input type="text" ng-blur="c1.text.setData(temp)" ng-model="temp">
+            <span style="background-color: darkgray;">{{c1.text.getData()}}</span>
         </div>
         <div ng-controller="myCtrl2 as c2">
-            <input type="text" ng-model="c2.text.t">
-            <span style="background-color: darkgray;">{{c2.text.t}}</span>
+            <input type="text" ng-model="temp2" ng-blur="c2.text.setData(temp2)">
+            <span style="background-color: darkgray;">{{c2.text.getData()}}</span>
         </div>
     </body>
 </html>
