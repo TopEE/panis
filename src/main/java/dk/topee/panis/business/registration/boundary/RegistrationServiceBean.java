@@ -9,9 +9,9 @@ import java.util.List;
 @Stateless
 public class RegistrationServiceBean {
 
-    public List<User> users = new ArrayList<>();
+    List<User> users = new ArrayList<>();
 
-    public List<User> getAllUsers() {
+    public RegistrationServiceBean() {
         User user1 = new User();
         user1.setEmail("andersand@andeby.dk");
         user1.setInitials("aaa");
@@ -22,6 +22,9 @@ public class RegistrationServiceBean {
         user2.setInitials("oja");
         user2.setUsername("Onkel Joakim Von And");
         users.add(user2);
+    }
+
+    public List<User> getAllUsers() {
         return users;
     }
 

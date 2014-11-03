@@ -24,10 +24,9 @@ public class RegistrationResource {
     @GET
     @Path("users")
     public List<User> getAllUsers() {
-        log.entering(getClass().getName(), "getAllUsers");
         List<User> allUsers = registrationService.getAllUsers();
-        log.exiting(getClass().getName(), "getAllUsers");
-        return allUsers;
+        throw new RuntimeException("Der skete en fejl");
+//        return allUsers;
     }
 
     @POST
