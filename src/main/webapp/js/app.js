@@ -18,4 +18,6 @@
             $urlRouterProvider.otherwise('/login');
         })
 
+        .constant('baseResource', 'http://localhost:8080/resource');
+
 })();

@@ -2,7 +2,7 @@
 
     'use strict';
     
-    angular.module('panis.login', []).controller('LoginController', LoginController);
+    angular.module('panis.login').controller('LoginController', LoginController);
     
     function LoginController($state, userService) {
         /* jshint validthis: true */
@@ -17,7 +17,7 @@
 
         function authenticate(username, password) {
             var user = userService.login(username, password);
-            if(user) {
+            if (user) {
                 $state.go('list');
             } else {
                 console.log('Du blev ikke logget ind!');

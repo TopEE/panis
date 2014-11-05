@@ -2,6 +2,7 @@ package dk.topee.panis.business.login.boundary;
 
 import dk.topee.panis.business.login.entity.UserCredentials;
 
+import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.EntityManager;
@@ -18,18 +19,15 @@ public class LoginResource {
 
     private static final Logger log = Logger.getLogger(LoginResource.class.getName());
 
-    @PersistenceContext
-    EntityManager em;
+    @Inject
+    LoginServiceBean loginService;
 
     @GET
-    public JsonObject getUsername() {
+    public UserCredentials getUsername() {
         log.entering(getClass().getName(), "getUsername");
         log.exiting(getClass().getName(), "getUsername");
 
-        UserCredentials userCredentials = em.find(UserCredentials.class, new Integer(1));
-        System.out.println("userCredentials.email = " + userCredentials.email);
-
-        return Json.createObjectBuilder().add("name", "Flemming").build();
+        return loginService.login();
 
     }
 

@@ -1,14 +1,26 @@
 package dk.topee.panis.business.login.boundary;
 
+import dk.topee.panis.business.login.entity.UserCredentials;
+
 import javax.ejb.Stateless;
-import javax.security.auth.login.LoginException;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 @Stateless
 public class LoginServiceBean {
 
+    @PersistenceContext
+    EntityManager em;
 
+    public UserCredentials login() {
+        UserCredentials userCredentials = new UserCredentials();
+        userCredentials.email = "test@test.dk";
+        userCredentials.password = "test";
 
-    public void login() throws LoginException {
+        em.persist(userCredentials);
+
+        UserCredentials userCredentials1 = em.find(UserCredentials.class, new Integer(1));
+        return userCredentials1;
 
     }
 }

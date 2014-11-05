@@ -4,11 +4,12 @@
 
 	angular.module('user-service', []).factory('userService', UserService);
 	
-	function UserService() {
+	function UserService($http, baseResource) {
 
         var service = {
             login: login,
-            getLoggedInUser: getLoggedInUser
+            getLoggedInUser: getLoggedInUser,
+            getRegistredUser: getRegistredUser
         };
 
         var users = [
@@ -30,6 +31,13 @@
 
         function  getLoggedInUser() {
             return loggedInUser;
+        }
+
+        function getRegistredUser() {
+            return $http.get(baseResource + "/registration/users").then(function (res) {
+                console.log(res.data);
+                return res.data;
+            });
         }
 
         function login(username, password) {
