@@ -24,9 +24,7 @@ public class LoginResource {
 
     @GET
     public UserCredentials getUsername() {
-        log.entering(getClass().getName(), "getUsername");
-        log.exiting(getClass().getName(), "getUsername");
-
+        System.out.println("LoginResource.getUsername");
         return loginService.login();
 
     }

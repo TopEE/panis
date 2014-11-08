@@ -13,13 +13,15 @@ public class LoginServiceBean {
     EntityManager em;
 
     public UserCredentials login() {
+        System.out.println("LoginServiceBean.login");
+
         UserCredentials userCredentials = new UserCredentials();
-        userCredentials.email = "test@test.dk";
-        userCredentials.password = "test";
+        userCredentials.setEmail("test@test.dk");
+        userCredentials.setPassword("test");
 
         em.persist(userCredentials);
 
-        UserCredentials userCredentials1 = em.find(UserCredentials.class, new Integer(1));
+        UserCredentials userCredentials1 = em.find(UserCredentials.class, 1);
         return userCredentials1;
 
     }
