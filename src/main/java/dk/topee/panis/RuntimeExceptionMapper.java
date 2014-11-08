@@ -11,9 +11,7 @@ public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException>
 
     @Override
     public Response toResponse(RuntimeException e) {
-        System.out.println("RuntimeExceptionMapper.toResponse");
         return Response.status(Status.INTERNAL_SERVER_ERROR).header("x-message", e.getMessage()).build();
-
     }
 
 }
