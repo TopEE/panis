@@ -19,7 +19,7 @@ som udnytter angular's two-way binding til at kunne udskifte tekster "on the fly
 
 Nye sprog tilføjes til messages.js med kommandoen 
 
-`$translateProvider.translations('<key>', <object>)`
+    $translateProvider.translations('<key>', <object>)
 
 Hvor <key> er en string kode som definere sproget og <object> er et javascript object som indeholder oversættelsen.
 
@@ -27,23 +27,21 @@ Hvor <key> er en string kode som definere sproget og <object> er et javascript o
 
 ##### webapp/js/messges.js
 
-`
-$translateProvider.translations('da', translation_da)
-`
+    $translateProvider.translations('da', translation_da)
 
 ##### webapp/js/i18n/danish.js
 
-`
-var translation_da = {
-    common: {
-        header: "Dette er en overskrift"
+
+    var translation_da = {
+        common: {
+            header: "Dette er en overskrift"
+        }
     }
-}
-`
+
 
 Tilføj beskeder med binding eller directive.
 
-`<div>{{'common.header' | translate}}</div>`
+    <div>{{'common.header' | translate}}</div>
 
-`<div translate="common.header"></div>`
+    <div translate="common.header"></div>
 
