@@ -1,4 +1,4 @@
 src/main/java
 =====
 
-![alt tag](http://onsitepcsolution.com/wp-content/uploads/2014/08/java_tech.jpg)
+![alt tag](http://www.eclipse.org/xtend/images/java8_logo.png)
