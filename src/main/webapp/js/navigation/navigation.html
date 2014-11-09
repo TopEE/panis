@@ -1,9 +1,16 @@
-<div class="navbar navbar-inverse navbar-fixed-top morgen" role="navigation" ng-controller="NavigationController as navCtrl">
-    <div class="container">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">{{navCtrl.logged}}</a></li>
-            <li class="navbar-inverse"><a href="#">Menu punkt 1</a></li>
-        </ul>
-
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Panis</a>
+            <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">{{'registration.choose_language' | translate}}<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a ng-click="navigation.changeLanguage('da')">{{'common.danish' | translate}}</a></li>
+                    <li><a ng-click="navigation.changeLanguage('en')">{{'common.english' | translate}}</a></li>
+                </ul>
+            </li>
+                </ul>
+        </div>
     </div>
-</div>
+</nav>

@@ -2,8 +2,9 @@
 
     angular.module('panis', [
         'ui.router',
+        'pascalprecht.translate',
         'ngAnimate',
-        'user-service',
+        'user.service',
         'panis.login',
         'panis.registration',
         'panis.list'

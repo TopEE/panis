@@ -4,12 +4,20 @@
     
     angular.module('panis').controller('NavigationController', NavigationController);
     
-    function NavigationController() {
+    function NavigationController($translate) {
         /* jshint validthis: true */
-        var vm = this;
+        var navigation = this;
         
-        vm.logged = "";
-        
-     }
+        navigation.changeLanguage = changeLanguage;
+
+        function changeLanguage(key) {
+            if (key === 'da') {
+                $translate.use(key);
+            } else if (key === 'en') {
+                $translate.use(key);
+            }
+        }
+
+    }
 
 })();

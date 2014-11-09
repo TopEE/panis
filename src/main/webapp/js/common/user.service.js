@@ -2,7 +2,7 @@
 
     'use strict';
 
-	angular.module('user-service', []).factory('userService', UserService);
+	angular.module('user.service', []).factory('userService', UserService);
 	
 	function UserService($http, baseResource) {
 
