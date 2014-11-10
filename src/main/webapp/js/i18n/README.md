@@ -39,7 +39,7 @@ Hvor \<key\> er en string kode som definere sproget og \<object\> er et javascri
     }
 
 
-Tilføj beskeder med binding eller directive.
+Tilføj beskeder med filter eller directive.
 
     <div>{{'common.header' | translate}}</div>
 
