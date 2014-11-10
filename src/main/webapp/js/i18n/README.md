@@ -21,7 +21,7 @@ Nye sprog tilføjes til messages.js med kommandoen
 
     $translateProvider.translations('<key>', <object>)
 
-Hvor <key> er en string kode som definere sproget og <object> er et javascript object som indeholder oversættelsen.
+Hvor \<key\> er en string kode som definere sproget og \<object\> er et javascript object som indeholder oversættelsen.
 
 #### Eksempel
 
@@ -39,7 +39,7 @@ Hvor <key> er en string kode som definere sproget og <object> er et javascript o
     }
 
 
-Tilføj beskeder med binding eller directive.
+Tilføj beskeder med filter eller directive.
 
     <div>{{'common.header' | translate}}</div>
 
