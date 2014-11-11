@@ -1,6 +1,6 @@
 package dk.topee.panis.business.registration.boundary;
 
-import dk.topee.panis.business.registration.entity.User;
+import dk.topee.panis.business.registration.entity.MyTestEntity;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -22,17 +22,17 @@ public class RegistrationResource {
     RegistrationServiceBean registrationService;
 
     @GET
-    @Path("users")
-    public List<User> getAllUsers() {
-        List<User> allUsers = registrationService.getAllUsers();
+    @Path("myTestEntities")
+    public List<MyTestEntity> getAllUsers() {
+        List<MyTestEntity> allMyTestEntities = registrationService.getAllUsers();
         throw new RuntimeException("Der skete en fejl");
-//        return allUsers;
+//        return allMyTestEntities;
     }
 
     @POST
-    @Path("user")
-    public Response register(User user) {
-        registrationService.addUser(user);
+    @Path("myTestEntity")
+    public Response register(MyTestEntity myTestEntity) {
+        registrationService.addUser(myTestEntity);
         return Response.ok().build();
     }
 
