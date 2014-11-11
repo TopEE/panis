@@ -1,14 +1,14 @@
 package dk.topee.panis.business.login.boundary;
 
 import javax.ejb.Stateless;
-import javax.security.auth.login.LoginException;
 
 @Stateless
 public class LoginServiceBean {
 
+    public String login() {
+        System.out.println("LoginServiceBean.login");
 
-
-    public void login() throws LoginException {
+        return "String";
 
     }
 }

@@ -9,7 +9,8 @@
                     url: '/registration',
                     views: {
                         'navigation': {
-                            templateUrl: 'js/registration/registration.top.html'
+                            templateUrl: 'js/navigation/navigation.html',
+                            controller: 'NavigationController as navigation'
                         },
                         'content': {
                             templateUrl: 'js/registration/registration.html',

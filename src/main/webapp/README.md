@@ -1,7 +1,7 @@
 src/main/webapp
 =====
 
-![alt tag](http://dinguk.org/wp-content/uploads/sites/2/2014/03/Web-WWW-%C2%A9-Scanrail-Fotolia.com_.jpg)
+![alt tag](http://www.unawebparati.com/wp-content/uploads/2014/05/web.jpg)
 
 ### Panis Web delen følger følgende konventioner:
 

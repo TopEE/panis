@@ -1,9 +1,9 @@
 <div class="jumbotron">
     <div class="container">
-        <h1>Den sprøde morgenmadsapplikation!</h1>
+        <h1 translate="common.frontsideheading"></h1>
 
         <div class="col-md-5">
-            <p>Registrer dig lige nu og bliv en del af denne super fede morgenmadsordning</p>
+            <p translate="registration.frontsidetext"></p>
         </div>
         <div class="col-md-2">
         </div>
@@ -12,19 +12,19 @@
                 <div class="form-group-lg">
                     <div class="input-group form-group">
                         <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                        <input type="text" placeholder="Indtast et brugernavn" class="form-control">
+                        <input type="text" placeholder="{{'registration.placeholder.username' | translate}}" class="form-control">
                     </div>
                     <div class="input-group form-group">
                         <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                        <input type="text" placeholder="Indtast en email adresse" class="form-control">
+                        <input type="text" placeholder="{{'registration.placeholder.email' | translate}}" class="form-control">
                     </div>
                     <div class="input-group form-group">
                         <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                        <input type="password" placeholder="indtast et password" class="form-control">
+                        <input type="password" placeholder="{{'registration.placeholder.password' | translate}}" class="form-control" tooltip="test">
                     </div>
                     <p class="form-group">
-                        <a class="btn btn-primary btn-lg" role="button" ng-click="login.cancelButtonPushed = true">Annuller</a>
-                        <a class="btn btn-primary btn-lg" role="button">Opret</a>
+                        <a class="btn btn-primary btn-lg" role="button" ng-click="login.cancelButtonPushed = true">{{'registration.button.cancel' | translate}}</a>
+                        <a class="btn btn-primary btn-lg" role="button">{{'registration.button.create' | translate}}</a>
                     </p>
                 </div>
             </form>

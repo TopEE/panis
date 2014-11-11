@@ -8,3 +8,7 @@ Den ultimative morgen(panis) applikation
 Clone: https://github.com/TopEE/panis.git
 
 [Se her for hvordan du får projektet op at køre](./../../tree/master/src/main)
+
+## Dokumentation
+
+* [internationalisering](./../../tree/master/src/main/webapp/js/i18n)

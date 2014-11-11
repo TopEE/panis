@@ -2,8 +2,9 @@
 
     angular.module('panis', [
         'ui.router',
+        'pascalprecht.translate',
         'ngAnimate',
-        'user-service',
+        'user.service',
         'panis.login',
         'panis.registration',
         'panis.list'
@@ -17,5 +18,7 @@
                 });
             $urlRouterProvider.otherwise('/login');
         })
+
+        .constant('baseResource', 'http://localhost:8080/resource');
 
 })();

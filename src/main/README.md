@@ -3,7 +3,7 @@ src/main
 
 Kode der skal pakkes med ned i target er placeret her
 
-![alt tag](http://www.stephenmccalden.com/wp-content/uploads/2011/07/computer_code.jpg)
+![alt tag](http://bitwizards.com/bitwizards/media/Blogs/Vincent_Mayfield/2011/build-graph.jpg)
 
 Efter at du har lavet en clone af projektet skal du gøre følgende:
 

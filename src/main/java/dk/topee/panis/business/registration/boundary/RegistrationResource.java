@@ -31,7 +31,7 @@ public class RegistrationResource {
 
     @POST
     @Path("user")
-    public Response addUser(User user) {
+    public Response register(User user) {
         registrationService.addUser(user);
         return Response.ok().build();
     }

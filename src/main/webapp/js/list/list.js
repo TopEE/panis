@@ -22,13 +22,16 @@
                 })
         })
 
-        .controller('ListController', function () {
-
+        .controller('ListController', function (userService) {
+            var list = this;
+            list.users = userService.getRegistredUser().then(function (users) {
+                 return users;
+            });
         })
-        .controller('TopController', function (loginService) {
+        .controller('TopController', function (userService) {
             var top = this;
 
-            top.loggedInUser = loginService.getLoggedInUser();
+            top.loggedInUser = userService.getLoggedInUser();
         })
 
 })();
