@@ -22,17 +22,17 @@ public class RegistrationResource {
     RegistrationServiceBean registrationService;
 
     @GET
-    @Path("myTestEntities")
-    public List<MyTestEntity> getAllUsers() {
-        List<MyTestEntity> allMyTestEntities = registrationService.getAllUsers();
+    @Path("users")
+    public List<String> getAllUsers() {
+        List<MyTestEntity> allUsers1 = registrationService.getAllUsers();
         throw new RuntimeException("Der skete en fejl");
-//        return allMyTestEntities;
+//        return allUsers;
     }
 
     @POST
-    @Path("myTestEntity")
-    public Response register(MyTestEntity myTestEntity) {
-        registrationService.addUser(myTestEntity);
+    @Path("user")
+    public Response register(MyTestEntity user) {
+        registrationService.addUser(user);
         return Response.ok().build();
     }
 
