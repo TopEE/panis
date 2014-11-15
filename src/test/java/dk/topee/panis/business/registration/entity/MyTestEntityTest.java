@@ -10,7 +10,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class MyTestEntityIT extends JPABaseTest {
+public class MyTestEntityTest extends JPABaseTest {
 
     @Test
     public void validateORMappings() {

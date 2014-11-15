@@ -1,6 +1,6 @@
 package dk.topee.panis.business.registration.boundary;
 
-import dk.topee.panis.business.registration.entity.MyTestEntity;
+import dk.topee.panis.business.registration.entity.UserCredentials;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -10,30 +10,25 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-import java.util.logging.Logger;
 
 @Path("registration")
 @Produces(MediaType.APPLICATION_JSON)
 public class RegistrationResource {
-
-    private static final Logger log = Logger.getLogger(RegistrationResource.class.getName());
 
     @Inject
     RegistrationServiceBean registrationService;
 
     @GET
     @Path("users")
-    public List<String> getAllUsers() {
-        List<MyTestEntity> allUsers1 = registrationService.getAllUsers();
-        throw new RuntimeException("Der skete en fejl");
-//        return allUsers;
+    public List<UserCredentials> getAllUsers() {
+        return registrationService.getAllUsers();
     }
 
     @POST
     @Path("user")
-    public Response register(MyTestEntity user) {
-        registrationService.addUser(user);
-        return Response.ok().build();
+    public Response register(UserCredentials userCredentials) {
+        registrationService.addUser(userCredentials);
+        return Response.ok(userCredentials).build();
     }
 
 }

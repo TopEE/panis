@@ -1,9 +1,9 @@
 package dk.topee.test;
 
-import junit.framework.Assert;
-
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
+import static org.junit.Assert.fail;
 
 public class PersistenceHelper {
 
@@ -15,7 +15,7 @@ public class PersistenceHelper {
                 instance = Persistence.createEntityManagerFactory("integration-test");
             } catch (Exception ex) {
                 ex.printStackTrace();
-                Assert.fail("Exception during JPA EntityManagerFactory creation.");
+                fail("Exception during JPA EntityManagerFactory creation.");
                 throw new RuntimeException("Could not create EntityManagerFactory");
             }
         }

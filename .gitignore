@@ -1,7 +1,5 @@
 /.idea
 /target
-/panisdb
-/TestDB
 /src/main/webapp/scripts/bower_components
 /node_modules
 *.log
