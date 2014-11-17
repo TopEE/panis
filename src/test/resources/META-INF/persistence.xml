@@ -2,11 +2,21 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
     <persistence-unit name="integration-test" transaction-type="RESOURCE_LOCAL">
         <class>dk.topee.panis.business.registration.entity.MyTestEntity</class>
+        <!--<properties>-->
+            <!--<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
+            <!--<property name="eclipselink.logging.level" value="FINE"/>-->
+            <!--<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>-->
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost/db"/>-->
+            <!--<property name="javax.persistence.jdbc.user" value="SA"/>-->
+            <!--<property name="javax.persistence.jdbc.password" value=""/>-->
+        <!--</properties>-->
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:derby:TestDB;create=true"/>
-            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
             <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:."/>
+            <property name="javax.persistence.jdbc.user" value="SA"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
         </properties>
     </persistence-unit>
 </persistence>

@@ -3,3 +3,4 @@
 /src/main/webapp/scripts/bower_components
 /node_modules
 *.log
+/src/test/resources/db
