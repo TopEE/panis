@@ -1,6 +1,6 @@
 package dk.topee.panis.business.registration.boundary;
 
-import dk.topee.panis.business.registration.entity.UserCredentials;
+import dk.topee.panis.business.login.entity.UserCredentials;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -17,10 +17,6 @@ public class RegistrationServiceBean {
     public List<UserCredentials> getAllUsers() {
         TypedQuery<UserCredentials> query = em.createQuery("from UserCredentials uc", UserCredentials.class);
         return query.getResultList();
-    }
-
-    public void addUser(UserCredentials userCredentials) {
-        em.merge(userCredentials);
     }
 
 }

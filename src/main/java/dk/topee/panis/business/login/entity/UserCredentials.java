@@ -1,4 +1,4 @@
-package dk.topee.panis.business.registration.entity;
+package dk.topee.panis.business.login.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,10 +10,10 @@ public class UserCredentials {
     @Id
     @GeneratedValue
     private long id;
+
     private String username;
-    private String initials;
-    private String email;
-    private transient String password;
+
+    private String password;
 
     public long getId() {
         return id;
@@ -31,22 +31,6 @@ public class UserCredentials {
         this.username = username;
     }
 
-    public String getInitials() {
-        return initials;
-    }
-
-    public void setInitials(String initials) {
-        this.initials = initials;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -54,4 +38,5 @@ public class UserCredentials {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
