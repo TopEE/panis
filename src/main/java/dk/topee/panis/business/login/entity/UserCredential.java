@@ -17,7 +17,7 @@ public class UserCredential {
     @GeneratedValue
     private long id;
 
-    private String username;
+    private String email;
 
     private String password;
 
@@ -29,12 +29,12 @@ public class UserCredential {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String username) {
+        this.email = username;
     }
 
     public String getPassword() {

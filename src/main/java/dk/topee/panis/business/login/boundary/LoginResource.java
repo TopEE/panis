@@ -28,7 +28,7 @@ public class LoginResource {
     @Path("login")
     @PermitAll
     public AccessElement login(@Context HttpServletRequest request, LoginElement loginElement) {
-        log.info("Logging into the application with username [" + loginElement.getUsername() + "]");
+        log.info("Logging into the application with username [" + loginElement.getEmail() + "]");
         AccessElement accessElement = loginService.login(loginElement);
         if (accessElement != null) {
             request.getSession().setAttribute(AccessElement.PARAM_AUTH_ID, accessElement.getAccessId());
