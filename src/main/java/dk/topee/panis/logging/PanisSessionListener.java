@@ -17,11 +17,11 @@ public class PanisSessionListener implements HttpSessionListener {
         String id = httpSession.getId();
         long creationTime = httpSession.getCreationTime();
         System.out.println("Session created");
-        log.fine("Session created: id=" + id + ", create time=" + creationTime);
+        log.info("Session created: id=" + id + ", create time=" + creationTime);
     }
 
     @Override
     public void sessionDestroyed(HttpSessionEvent httpSessionEvent) {
-        log.fine("Session destroyed");
+        log.info("Session destroyed");
     }
 }

@@ -1,7 +1,7 @@
 package dk.topee.panis.business.login.control;
 
-import dk.topee.panis.business.login.entity.UserCredentials;
-import dk.topee.panis.business.login.entity.UserGroups;
+import dk.topee.panis.business.login.entity.UserCredential;
+import dk.topee.panis.business.login.entity.UserGroup;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
@@ -22,11 +22,11 @@ public class CreateAdministrator {
     @PostConstruct
     private void startup() {
         log.info("Creating the Panis administrator");
-        UserCredentials userCredentials = new UserCredentials();
+        UserCredential userCredentials = new UserCredential();
         userCredentials.setUsername("admin");
         userCredentials.setPassword("secret");
         em.persist(userCredentials);
-        UserGroups userGroups = new UserGroups();
+        UserGroup userGroups = new UserGroup();
         userGroups.setUsername("admin");
         userGroups.setGroupname("administrators");
         em.persist(userGroups);

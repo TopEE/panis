@@ -1,27 +1,13 @@
 package dk.topee.panis.business.login.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
-@Entity
-public class UserCredentials {
-
-    @Id
-    @GeneratedValue
-    private long id;
+@XmlRootElement
+public class LoginElement implements Serializable {
 
     private String username;
-
     private String password;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getUsername() {
         return username;
@@ -38,5 +24,4 @@ public class UserCredentials {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }

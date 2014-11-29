@@ -1,6 +1,6 @@
 package dk.topee.panis.business.registration.boundary;
 
-import dk.topee.panis.business.login.entity.UserCredentials;
+import dk.topee.panis.business.login.entity.UserCredential;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -18,7 +18,7 @@ public class RegistrationResource {
 
     @GET
     @Path("users")
-    public List<UserCredentials> getAllUsers() {
+    public List<UserCredential> getAllUsers() {
         return registrationService.getAllUsers();
     }
 

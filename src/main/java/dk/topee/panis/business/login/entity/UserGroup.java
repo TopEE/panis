@@ -1,11 +1,18 @@
 package dk.topee.panis.business.login.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-public class UserGroups {
+@NamedQueries(
+        {@NamedQuery(
+                name= UserGroup.BY_USERNAME,
+                query = "select ug from UserGroups ug where ug.username = :username")
+        }
+)
+public class UserGroup {
+
+    public static final String BY_USERNAME = "UserCredentials_findEntityByUsername";
+
 
     @Id
     @GeneratedValue
