@@ -23,7 +23,7 @@ public class CreateAdministrator {
     private void startup() {
         log.info("Creating the Panis administrator");
         UserCredential userCredentials = new UserCredential();
-        userCredentials.setEmail("admin@topdanmark.dk");
+        userCredentials.setUsername("admin");
         userCredentials.setPassword("secret");
         em.persist(userCredentials);
         UserGroup userGroups = new UserGroup();

@@ -6,7 +6,7 @@ import javax.persistence.*;
 @NamedQueries(
         {@NamedQuery(
                 name= UserCredential.BY_NAME_AND_PASSWORD,
-                query = "select uc from UserCredentials uc where uc.username = :username and uc.password = :password")
+                query = "select uc from UserCredential uc where uc.username = :username and uc.password = :password")
         }
 )
 public class UserCredential {
@@ -17,7 +17,7 @@ public class UserCredential {
     @GeneratedValue
     private long id;
 
-    private String email;
+    private String username;
 
     private String password;
 
@@ -29,12 +29,12 @@ public class UserCredential {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(String username) {
-        this.email = username;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

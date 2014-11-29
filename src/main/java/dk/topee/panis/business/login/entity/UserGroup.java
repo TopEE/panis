@@ -6,7 +6,7 @@ import javax.persistence.*;
 @NamedQueries(
         {@NamedQuery(
                 name= UserGroup.BY_USERNAME,
-                query = "select ug from UserGroups ug where ug.username = :username")
+                query = "select ug from UserGroup ug where ug.username = :username")
         }
 )
 public class UserGroup {

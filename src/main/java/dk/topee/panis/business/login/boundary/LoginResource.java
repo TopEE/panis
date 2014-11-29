@@ -3,13 +3,11 @@ package dk.topee.panis.business.login.boundary;
 import dk.topee.panis.business.login.entity.AccessElement;
 import dk.topee.panis.business.login.entity.LoginElement;
 
+import javax.annotation.security.DenyAll;
 import javax.annotation.security.PermitAll;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.util.logging.Logger;
@@ -25,7 +23,6 @@ public class LoginResource {
     LoginServiceBean loginService;
 
     @POST
-    @Path("login")
     @PermitAll
     public AccessElement login(@Context HttpServletRequest request, LoginElement loginElement) {
         log.info("Logging into the application with username [" + loginElement.getEmail() + "]");
@@ -35,6 +32,12 @@ public class LoginResource {
             request.getSession().setAttribute(AccessElement.PARAM_AUTH_TOKEN, accessElement.getAccessToken());
         }
         return accessElement;
+    }
+
+    @GET
+    @DenyAll
+    public String getLoggedInUser() {
+        return "Sikkerhedsfejl";
     }
 
 }

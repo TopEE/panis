@@ -31,7 +31,7 @@
         .controller('TopController', function (userService) {
             var top = this;
 
-            top.loggedInUser = userService.getLoggedInUser();
+
         })
 
 })();

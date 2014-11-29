@@ -19,6 +19,6 @@
             $urlRouterProvider.otherwise('/login');
         })
 
-        .constant('baseResource', 'http://localhost:8080/resource');
+        .constant('baseResource', 'http://localhost:8080/resources');
 
 })();

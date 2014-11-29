@@ -24,7 +24,7 @@ public class LoginServiceBean {
         ucQuery.setParameter("password", loginElement.getPassword());
         UserCredential userCredentials = ucQuery.getSingleResult();
         TypedQuery<UserGroup> ugQuery = em.createNamedQuery(UserGroup.BY_USERNAME, UserGroup.class);
-        ugQuery.setParameter("username", userCredentials.getEmail());
+        ugQuery.setParameter("username", userCredentials.getUsername());
         List<UserGroup> userGroups = ugQuery.getResultList();
         AccessElement accessElement = new AccessElement();
         accessElement.setAccessId(userGroups.get(0).getUsername());
