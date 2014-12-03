@@ -18,7 +18,7 @@
         function authenticate(username, password) {
             var user = userService.login(username, password);
             if (user) {
-                $state.go('list');
+                console.log(user);
             } else {
                 console.log('Du blev ikke logget ind!');
             }

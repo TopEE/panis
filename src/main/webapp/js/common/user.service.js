@@ -12,19 +12,6 @@
             getRegistredUser: getRegistredUser
         };
 
-        var users = [
-            {
-                user: 'svx',
-                pass: 'qq',
-                name: 'Søren Pedersen'
-            },
-            {
-                user: 'feb',
-                pass: 'kaffe--NU!',
-                name: 'Flemming Behrend'
-            }
-        ];
-
         var loggedInUser;
 
         return service;
@@ -41,12 +28,14 @@
         }
 
         function login(email, password) {
-            var loginElement = {
-                email: email,
-                password: password
-            }
-            return $http.post(baseResource + '/login', loginElement).then(function (loginAccess) {
+            return $http({
+                method: 'POST',
+                url: 'j_security_check',
+                data: $.param({j_username: "admin", j_password: "secret"}),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).then(function (loginAccess) {
                 console.log(loginAccess);
+
             });
         }
 
