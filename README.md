@@ -14,4 +14,8 @@ Clone: https://github.com/TopEE/panis.git
 * [internationalisering](./../../tree/master/src/main/webapp/js/i18n)
 * 
 Updated Read ME
+<<<<<<< HEAD
 Updated again and again and
+=======
+Updated again now and now, suck my balls
+>>>>>>> refs/remotes/origin/master
