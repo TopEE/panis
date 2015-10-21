@@ -12,3 +12,5 @@ Clone: https://github.com/TopEE/panis.git
 ## Dokumentation
 
 * [internationalisering](./../../tree/master/src/main/webapp/js/i18n)
+* 
+Updated Read ME
